@@ -1,6 +1,6 @@
 # action.yml
-name: "Docker-Compose Publish"
-author: "Darryl Mendillo"
+name: "Another docker compose publish"
+author: "Mike Kutzma"
 description: "Publish all docker containers in docker-compose file"
 branding:
   icon: "database"
