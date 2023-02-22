@@ -8,8 +8,8 @@ echo "OVERRIDE=$OVERRIDE"
 
 docker login ghcr.io -u "${GITHUB_REF}" -p "${REPO_TOKEN}"
 
-VERSION=$VERSION docker-compose -f docker-compose.yml -f "$OVERRIDE" build
-IMAGES=$(docker-compose -f docker-compose.yml -f "$OVERRIDE" images -q)
+VERSION=$VERSION docker-compose -f "$OVERRIDE" build
+IMAGES=$(docker-compose -f "$OVERRIDE" images -q)
 
 echo "IMAGES: $IMAGES"
 for IMAGE in $IMAGES; do
